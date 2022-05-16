@@ -12,5 +12,6 @@ def index():
     template = render_template('home.html')
     return template
 
+
 if __name__ == '__main__':
     app.run(debug=True)
