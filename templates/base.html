@@ -11,18 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <style>
         .nav-heading-title {
+            font-family: 'Roboto Mono', monospace;
             color: white;
             text-decoration: underline;
-            font-family: 'Roboto Mono', monospace;
+            font-weight: bolder;
         }
 
-        nav {
+        .nav-bottom {
+            display: block;
+
+            box-shadow: 0px 15px 10px -15px #111;
+            /* -webkit-box-shadow: -2px -1px 15px 7px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: -3px -2px 30px 14px rgba(0, 0, 0, 0.425);
+            box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35); */
+        }
+
+        .nav-div-style {
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 60px;
+            height: 100px;
             background-color: pink;
-            display: flex;
+            display: block;
         }
 
         nav p {
@@ -57,10 +67,10 @@
         nav ul li ul {
             display: none;
             position: absolute;
-            background-color: white;
+            background-color: orange;
             padding: 5px;
             border-radius: 0px 0px 4px 4px;
-            border:1px solid red;
+            border: 1px solid purple;
         }
 
         nav ul li:hover ul {
@@ -68,56 +78,63 @@
         }
 
         nav ul li ul li {
-            width: 180px;
+            width: 160px;
             border-radius: 4px;
         }
 
         nav ul li ul li a {
             padding: 12px 14px;
+            background: blue;
+            border-radius: 15px;
+            color: white;
         }
 
         nav ul li ul li a:hover {
-            background: red;
+            background: rgb(241, 198, 205);
+            border-radius: 15px;
         }
     </style>
     <title>Bonnie & Clyde Cleaning</title>
 </head>
 
 <body>
-    <nav>
-        <p class="nav-heading-title">Bonnie and Clyde Cleaning services</p>
-        <p>$$i</p>
-        <ul>
-            <li><a href="index.html">Home</a>
-                <ul>
-                    <li><a href="#">Digital art</a></li>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">Digital art</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Services</a>
-                <ul>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">Flask</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Rates</a>
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Contact us</a>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Goal</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <div class="nav-div-style">
+        <div class="nav-div-style nav-top" style="height:50px"></div>
+        <nav class="nav-div-style nav-bottom">
+            <p class="nav-heading-title">Bonnie and Clyde Cleaning services</p>
+            <p>$$i</p>
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <ul>
+                        <li><a href="#">Digital art</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Digital art</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Javascript</a></li>
+                        <li><a href="#">Flask</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Rates</a>
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact us</a>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Goal</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
     {% block content %}
     {% endblock %}
 </body>
