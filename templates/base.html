@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --banner-space:100px;
+        }
         .nav-heading-title {
             font-family: 'Roboto Mono', monospace;
             color: white;
@@ -30,9 +33,10 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100px;
+            height: var(--banner-space);
             background-color: pink;
             display: block;
+            position:fixed;
         }
 
         nav p {
@@ -93,6 +97,21 @@
             background: rgb(241, 198, 205);
             border-radius: 15px;
         }
+
+        .banner-space {
+            height:var(--banner-space);
+        }
+        .block-content-body-wrapper {
+            height:5500px;
+            background-image:url(https://lirp.cdn-website.com/f477790b/dms3rep/multi/opt/shutterstock_1952836222-1920w.jpg)!important
+        }
+        .page-footer {
+            background-color: #f26722!important;
+            height:150px;
+            width:100%;
+            bottom:0;
+            position:absolute;
+        }
     </style>
     <title>Bonnie & Clyde Cleaning</title>
 </head>
@@ -134,9 +153,15 @@
                 </li>
             </ul>
         </nav>
-    </div>
+        <div class="banner-space"></div>
+    <div class="block-content-body-wrapper">
     {% block content %}
-    {% endblock %}
-</body>
+    {% endblock %}  
+    </div>      
+    </div>
 
+</body>
+<footer>
+    <div class="page-footer"></div>
+</footer>
 </html>
